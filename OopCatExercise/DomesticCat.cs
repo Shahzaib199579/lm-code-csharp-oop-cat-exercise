@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 
 namespace OopCatExercise
@@ -14,7 +15,8 @@ namespace OopCatExercise
         }
         public string Eat()
         {
-            return "Purrrrrrr";
+            var random = new Random();
+            return random.Next(0,2) != 1 ? "Purrrrrrr" : "Purrrrrrr...It will do I suppose";
         }
 
         public void GoToSleep()
